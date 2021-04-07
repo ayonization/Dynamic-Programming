@@ -1,13 +1,15 @@
 #include <bits/stdc++.h>
 using namespace std;
-int knapsack(int wt[], int val[], int w, int n)
+
+int dp[100000][100000];
+void knapsack(int wt[], int val[], int w, int n)
 {
     if (n == 0 or w == 0)
-        return 0;
+        dp[n][w]= 0;
     if (wt[n - 1] > w)
-        return knapsack(wt, val, w, n - 1);
-    if (wt[n - 1] <= w)
-        return max(knapsack(wt, val, w, n - 1), val[n - 1] + knapsack(wt, val, w - wt[n - 1], n - 1));
+        dp[n][w]= dp[n-1][w];
+    else 
+        dp[n][w] = max(dp[n-1][w],val[n-1]+dp[n-1][w-wt[n-1]]);
 }
 
 int main()
@@ -29,12 +31,11 @@ int main()
     {
         cin >> val[i];
     }
-
     int w;
     cout << "Enter max weight" << endl;
     cin >> w;
 
-    int ans = knapsack(wt, val, w, n);
-
-    cout << "Answer is " << ans << endl;
+    knapsack(wt,val,n,w);
+    
+    cout << "Answer is " << dp[n][w] << endl;
 }
