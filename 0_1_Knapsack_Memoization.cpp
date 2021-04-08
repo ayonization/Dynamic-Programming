@@ -26,7 +26,7 @@ int main()
     {
         cin >> wt[i];
     }
-
+    
     int val[n];
     cout << "Enter the value array" << endl;
     for (int i = 0; i < n; i++)
