@@ -14,7 +14,7 @@ bool SubsetSum(int a[], int sum, int n)
 
             if (i > 0 and j > 0)
             {
-                if (a[i - 1] > sum)
+                if (a[i - 1] > j)
                     dp[i][j] = dp[i - 1][j];
                 else
                     dp[i][j] = dp[i - 1][j] or dp[i - 1][j - a[i - 1]];
