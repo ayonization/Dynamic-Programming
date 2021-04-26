@@ -56,10 +56,10 @@ string lcs(string s1,string s2,int n,int m)
 int main()
 {   
     string s1,s2;
-    cout<<"Enter first string"<<endl; //aion
+    cout<<"Enter first string"<<endl; 
     cin>>s1;
     
-    cout<<"Enter second string"<<endl; //axxxxxxxxxiiiiiiooooooooonnn
+    cout<<"Enter second string"<<endl; 
     cin>>s2;
 
     int n=s1.length();
