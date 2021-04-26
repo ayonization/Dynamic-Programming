@@ -42,9 +42,9 @@ string lcs(string s1,string s2,int n,int m)
             else j-=1;
         }
 
-        reverse(ans.begin(),ans.end());
 
     }
+        reverse(ans.begin(),ans.end());
     
 
         return ans;
@@ -75,3 +75,6 @@ int main()
 
 
 }
+
+
+
