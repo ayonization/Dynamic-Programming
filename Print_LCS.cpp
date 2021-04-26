@@ -1,9 +1,10 @@
 #include<bits/stdc++.h>
 using namespace std;
-string ans;
 int dp[1000][1000];
 string lcs(string s1,string s2,int n,int m)
 {
+    string ans;
+
     for (int i = 0; i <=n; i++)
     {
         for (int j = 0; j <=m; j++)
@@ -55,19 +56,20 @@ string lcs(string s1,string s2,int n,int m)
 int main()
 {   
     string s1,s2;
-    cout<<"Enter first string"<<endl;
+    cout<<"Enter first string"<<endl; //aion
     cin>>s1;
     
-    cout<<"Enter second string"<<endl;
+    cout<<"Enter second string"<<endl; //axxxxxxxxxiiiiiiooooooooonnn
     cin>>s2;
 
     int n=s1.length();
     int m=s2.length();
 
-    string anss= lcs(s1,s2,n,m);
+    string ans= lcs(s1,s2,n,m);
 
     cout<<"The longest common subsequnce is"<<endl;
-    cout<<anss;
+    cout<<ans <<endl;
+   
    
    
 
