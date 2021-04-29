@@ -8,7 +8,7 @@ int mcm(int a[], int i, int j)
 
     int ans = INT_MAX;
 
-    if (dp[i][j] != 1)
+    if (dp[i][j] != -1)
         return dp[i][j];
 
     for (int k = i; k <= j - 1; k++)
