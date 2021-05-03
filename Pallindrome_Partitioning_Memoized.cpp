@@ -24,7 +24,7 @@ int partition(string s, int i,int j)
 
     if(dp[i][j]!=-1) return dp[i][j];
 
-    if(ispallindrome(s,i,j)) return 0;
+    if(ispallindrome(s,i,j)) return dp[i][j]=0;
 
     int ans=INT_MAX;
 
@@ -44,18 +44,10 @@ int main()
     cout<<"Enter string"<<endl;
     cin>>s;
 
-    int ans=partition(s,0,s.length()-1);
+    int ansmemo=partition(s,0,s.length()-1);
 
-    cout<<"Minimum number of partitons for pallindromic substrings is "<<dp[1][s.length()-1]<<" "<<ans<<endl;
+    cout<<"Minimum number of partitons for pallindromic substrings is "<<ansmemo<<endl;
 
 
-    for(int i=0;i<=s.length();i++){
-        for(int j=0;j<= s.length();j++)
-        {
-            cout<<dp[i][j]<<" ";
-        }
-
-        cout<<endl;
-    }
 
 }
